@@ -1,0 +1,83 @@
+/* Styles for the product list container */
+.product-list {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px;
+}
+
+/* Styles for the product card */
+.product-card {
+    width: 100%;
+    max-width: 300px; /* Limits the maximum width of the card */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px; /* Space between product cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+/* Hover effect for the product card */
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+/* Styles for the product title */
+.product-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 10px 0; /* Space between title and price */
+}
+
+/* Styles for the product price */
+.product-card p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Styles for the paginated list container */
+.paginated-list {
+    width: 100%;
+    max-width: 100%; /* Ensures responsiveness */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    border-radius: 8px;
+}
+
+/* Adaptations for tablets */
+@media (max-width: 1024px) {
+    .product-card {
+        max-width: 250px;
+        padding: 12px;
+    }
+}
+
+/* Adaptations for mobile devices */
+@media (max-width: 768px) {
+    .product-card {
+        padding: 10px; /* Further reducing padding inside the card */
+    }
+    .product-card h3 {
+        font-size: 16px;
+    }
+    .product-card p {
+        font-size: 14px;
+    }
+}
+
+/* Adaptations for very small screens */
+@media (max-width: 480px) {
+    .product-card {
+        max-width: 100%; /* Full-width card */
+        padding: 8px;
+    }
+    .product-card h3 {
+        font-size: 14px;
+    }
+    .product-card p {
+        font-size: 12px; /* Very small font size for the price */
+    }
+}

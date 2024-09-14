@@ -1,0 +1,75 @@
+.pagination {
+    display: flex;
+    flex-direction: column; /* Vertical alignment on mobile devices */
+    justify-content: center; /* Center pagination buttons horizontally */
+    margin: 20px 0; /* Space from and to other elements */
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 5px 0; /* Space between pagination buttons */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+}
+
+.pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed; /* Cursor for inactive buttons */
+}
+
+.list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between list items */
+    justify-content: center; /* Center product cards on mobile devices */
+    flex-direction: column; /* Align items in a column on mobile devices */
+}
+
+/* Adaptations for tablets */
+@media (max-width: 1024px) {
+    .pagination {
+        margin: 15px 0; /* Reduced space at the top and bottom */
+    }
+    .pagination button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .list-items {
+        gap: 15px; /* Reduced space between list items */
+    }
+}
+
+/* Adaptations for mobile devices */
+@media (max-width: 768px) {
+    .pagination {
+        flex-direction: row; /* Horizontal alignment of pagination buttons */
+        flex-wrap: wrap; /* Wrapping buttons on mobile devices */
+    }
+    .pagination button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+    .list-items {
+        gap: 10px;
+    }
+}
+
+/* Adaptations for very small screens */
+@media (max-width: 480px) {
+    .pagination button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    .list-items {
+        gap: 5px; /* Minimal space between list items */
+    }
+}

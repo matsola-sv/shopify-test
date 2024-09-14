@@ -1,0 +1,35 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  padding: 20px;
+  background-color: #f0f2f5;
+  min-height: 100vh; /* Ensures full-screen height */
+  box-sizing: border-box; /* Includes padding in width/height calculations */
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .app {
+    padding: 15px; /* Adjust padding for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 10px; /* Adjust padding for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 8px; /* Further adjust padding for very small screens */
+  }
+}

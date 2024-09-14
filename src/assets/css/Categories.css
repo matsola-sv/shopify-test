@@ -1,0 +1,63 @@
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Space between category buttons */
+    margin-bottom: 20px; /* Space between categories and the product list */
+    justify-content: center; /* Center buttons on mobile devices */
+}
+
+.categories button {
+    background-color: #007bff; /* Main button color */
+    color: #ffffff; /* Text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for category buttons */
+.categories button:hover {
+    background-color: #0056b3; /* Darker shade for hover */
+}
+
+/* Active category */
+.categories button.active {
+    background-color: #0056b3; /* Same color for active category */
+}
+
+/* Adaptations for tablets */
+@media (max-width: 1024px) {
+    .categories {
+        gap: 8px; /* Reduced space between category buttons */
+    }
+    .categories button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Adaptations for mobile devices */
+@media (max-width: 768px) {
+    .categories {
+        gap: 10px;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+    .categories button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Adaptations for very small screens */
+@media (max-width: 480px) {
+    .categories {
+        gap: 12px; /* Maximum reduced space between category buttons */
+    }
+    .categories button {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
