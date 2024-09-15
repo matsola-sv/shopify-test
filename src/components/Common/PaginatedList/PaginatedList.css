@@ -1,0 +1,38 @@
+.paginated-list {
+    width: 100%;
+    max-width: 100%; /* Ensures responsiveness */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    border-radius: 8px;
+}
+
+.list-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between list items */
+    justify-content: center; /* Center product cards on mobile devices */
+    flex-direction: column; /* Align items in a column on mobile devices */
+}
+
+/* Adaptations for tablets */
+@media (max-width: 1024px) {
+    .list-items {
+        gap: 15px; /* Reduced space between list items */
+    }
+}
+
+/* Adaptations for mobile devices */
+@media (max-width: 768px) {
+    .list-items {
+        gap: 10px;
+    }
+}
+
+/* Adaptations for very small screens */
+@media (max-width: 480px) {
+    .list-items {
+        gap: 5px; /* Minimal space between list items */
+    }
+}

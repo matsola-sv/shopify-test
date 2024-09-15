@@ -1,8 +1,9 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import {CollectionI} from "../../models/common";
-import {CursorType, PageInfoI} from "../../models/common";
-import Pagination from "./Pagination";
-import Preloader from "./Preloader";
+import './PaginatedList.css';
+import {CollectionI} from "../../../models/common";
+import {CursorType, PageInfoI} from "../../../models/common";
+import Pagination from "../Pagination/Pagination";
+import Preloader from "../Preloader/Preloader";
 
 interface PaginatedListProps<E> {
     fetchData: (cursor: CursorType) => Promise<CollectionI<E> | null>;

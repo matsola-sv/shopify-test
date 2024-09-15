@@ -1,9 +1,9 @@
 import React, {useState, useEffect, FC} from 'react';
-import '../assets/css/Categories.css';
-import {IDType} from "../models/common";
-import {CategoryI} from "../models/shopifyEntities";
-import {getCategories} from '../services/categoryService';
-import Button from "./common/buttons/Button";
+import './Categories.css';
+import {IDType} from "../../models/common";
+import {CategoryI} from "../../models/shopifyEntities";
+import {getCategories} from '../../services/categoryService';
+import Button from "../Common/Buttons/Button/Button";
 
 interface CategoriesProps {
     onSelectCategory: (id: IDType) => void;

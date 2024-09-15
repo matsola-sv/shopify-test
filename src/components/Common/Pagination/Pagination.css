@@ -1,7 +1,7 @@
 .pagination {
     display: flex;
     flex-direction: column; /* Vertical alignment on mobile devices */
-    justify-content: center; /* Center pagination buttons horizontally */
+    justify-content: center; /* Center pagination Buttons horizontally */
     margin: 20px 0; /* Space from and to other elements */
 }
 
@@ -11,7 +11,7 @@
     border: none;
     border-radius: 4px;
     padding: 8px 12px;
-    margin: 5px 0; /* Space between pagination buttons */
+    margin: 5px 0; /* Space between pagination Buttons */
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth background color transition */
@@ -26,14 +26,6 @@
     cursor: not-allowed;
 }
 
-.list-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Space between list items */
-    justify-content: center; /* Center product cards on mobile devices */
-    flex-direction: column; /* Align items in a column on mobile devices */
-}
-
 /* Adaptations for tablets */
 @media (max-width: 1024px) {
     .pagination {
@@ -43,23 +35,17 @@
         font-size: 14px;
         padding: 8px 16px;
     }
-    .list-items {
-        gap: 15px; /* Reduced space between list items */
-    }
 }
 
 /* Adaptations for mobile devices */
 @media (max-width: 768px) {
     .pagination {
-        flex-direction: row; /* Horizontal alignment of pagination buttons */
-        flex-wrap: wrap; /* Wrapping buttons on mobile devices */
+        flex-direction: row; /* Horizontal alignment of pagination Buttons */
+        flex-wrap: wrap; /* Wrapping Buttons on mobile devices */
     }
     .pagination button {
         font-size: 12px;
         padding: 6px 12px;
-    }
-    .list-items {
-        gap: 10px;
     }
 }
 
@@ -68,8 +54,5 @@
     .pagination button {
         font-size: 10px;
         padding: 4px 8px;
-    }
-    .list-items {
-        gap: 5px; /* Minimal space between list items */
     }
 }

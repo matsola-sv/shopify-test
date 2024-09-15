@@ -1,6 +1,6 @@
 import React from 'react';
-import './assets/css/App.css';
-import CategoryProductView from "./components/CategoryProductView";
+import './App.css';
+import CategoryProductView from "../CategoryProductView/CategoryProductView";
 
 const App = () => {
     return (

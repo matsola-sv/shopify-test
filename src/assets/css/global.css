@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    width: 100%; /* Ensures full width. Fixes a bug with display on the entire width of the screen!*/
+}
+
+/* Media queries for for tablets */
+@media (max-width: 1024px) {
+    .content-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Adjust padding for mobile devices */
+@media (max-width: 768px) {
+    .content-wrapper {
+        padding: 8px;
+    }
+}
+
+/* Further adjust padding for very small screens */
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: 5px;
+    }
+}

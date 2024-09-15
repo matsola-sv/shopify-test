@@ -1,9 +1,9 @@
 .categories {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px; /* Space between category buttons */
+    gap: 5px; /* Space between category Buttons */
     margin-bottom: 20px; /* Space between categories and the product list */
-    justify-content: center; /* Center buttons on mobile devices */
+    justify-content: center; /* Center Buttons on mobile devices */
 }
 
 .categories button {
@@ -28,7 +28,7 @@
 /* Adaptations for tablets */
 @media (max-width: 1024px) {
     .categories {
-        gap: 8px; /* Reduced space between category buttons */
+        gap: 8px; /* Reduced space between category Buttons */
     }
     .categories button {
         font-size: 14px;
@@ -40,8 +40,8 @@
 @media (max-width: 768px) {
     .categories {
         gap: 10px;
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center; /* Center buttons */
+        flex-direction: column; /* Stack Buttons vertically */
+        align-items: center; /* Center Buttons */
     }
     .categories button {
         font-size: 12px;
@@ -52,7 +52,7 @@
 /* Adaptations for very small screens */
 @media (max-width: 480px) {
     .categories {
-        gap: 12px; /* Maximum reduced space between category buttons */
+        gap: 12px; /* Maximum reduced space between category Buttons */
     }
     .categories button {
         font-size: 10px;
