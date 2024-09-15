@@ -7,7 +7,7 @@ const CategoryProductView: FC = () => {
     const [activeCategory, setActiveCategory] = useState<IDType>(null);
 
     return (
-        <div className="content-wrapper">
+        <div className="content-wrapper" data-testid="category-product-view">
             <Categories onSelectCategory={setActiveCategory} />
             {activeCategory && (
                 <ProductList

@@ -1,9 +1,13 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders CategoryProductView component', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  // We check whether the CategoryProductView component is rendered
+  const categoryProductViewElement = screen.getByTestId('category-product-view');
+
+  // We use .toBeInTheDocument() to check whether the element is in the DOM
+  expect(categoryProductViewElement).toBeInTheDocument();
 });
