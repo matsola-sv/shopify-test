@@ -7,7 +7,7 @@
 }
 
 .categories button {
-    background-color: #007bff; /* Main button color */
+    background-color: #007bff;
     color: #ffffff; /* Text color */
     border: none;
     border-radius: 4px;
@@ -17,14 +17,12 @@
     transition: background-color 0.3s ease; /* Smooth background color transition */
 }
 
-/* Hover effect for category buttons */
 .categories button:hover {
     background-color: #0056b3; /* Darker shade for hover */
 }
 
-/* Active category */
 .categories button.active {
-    background-color: #0056b3; /* Same color for active category */
+    background-color: #0056b3;
 }
 
 /* Adaptations for tablets */

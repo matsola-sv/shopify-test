@@ -18,12 +18,12 @@
 }
 
 .pagination button:hover {
-    background-color: #0056b3; /* Darker shade for hover */
+    background-color: #0056b3;
 }
 
 .pagination button:disabled {
     background-color: #cccccc;
-    cursor: not-allowed; /* Cursor for inactive buttons */
+    cursor: not-allowed;
 }
 
 .list-items {

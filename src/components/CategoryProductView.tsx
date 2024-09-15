@@ -7,7 +7,7 @@ const CategoryProductView: FC = () => {
     const [activeCategory, setActiveCategory] = useState<IDType>(null);
 
     return (
-        <>
+        <div className="content-wrapper">
             <Categories onSelectCategory={setActiveCategory} />
             {activeCategory && (
                 <ProductList
@@ -15,7 +15,7 @@ const CategoryProductView: FC = () => {
                     productsPerPage={2}
                 />
             )}
-        </>
+        </div>
     );
 };
 
