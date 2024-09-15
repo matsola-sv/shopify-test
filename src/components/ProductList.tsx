@@ -2,9 +2,9 @@ import React, {FC, useCallback} from 'react';
 import '../assets/css/ProductList.css';
 import {CursorType} from "../models/common";
 import {CollectionI} from "../models/common";
-import {getProductsByCategory} from '../services/shopifyApi';
-import PaginatedList from "./common/PaginatedList";
 import {PriceI, ProductI} from "../models/shopifyEntities";
+import {getProductsByCategory} from '../services/productService';
+import PaginatedList from "./common/PaginatedList";
 
 interface ProductsProps {
     categoryId: string;

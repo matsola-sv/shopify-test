@@ -9,7 +9,8 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = (props) => {
-    const { active = true,
+    const {
+        active = true,
         disabled = false,
         className = '',
         onClick, children

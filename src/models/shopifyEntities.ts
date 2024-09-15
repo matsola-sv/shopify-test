@@ -1,3 +1,10 @@
+export interface CategoryI {
+    node: {
+        id: string;
+        title: string;
+    }
+}
+
 export interface PriceI {
     amount: string;
     currencyCode: string;
@@ -11,12 +18,5 @@ export interface ProductI {
         priceRange: {
             minVariantPrice: PriceI;
         };
-    }
-}
-
-export interface CategoryI {
-    node: {
-        id: string;
-        title: string;
     }
 }

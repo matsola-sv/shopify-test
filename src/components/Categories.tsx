@@ -1,8 +1,8 @@
 import React, {useState, useEffect, FC} from 'react';
 import '../assets/css/Categories.css';
-import {getCategories} from '../services/shopifyApi';
 import {IDType} from "../models/common";
 import {CategoryI} from "../models/shopifyEntities";
+import {getCategories} from '../services/categoryService';
 import Button from "./common/buttons/Button";
 
 interface CategoriesProps {
