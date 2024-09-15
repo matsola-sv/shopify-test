@@ -1,20 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './assets/css/App.css';
-import {IDType} from "./models/common";
-import Categories from './components/Categories';
-import ProductList from './components/ProductList';
+import CategoryProductView from "./components/CategoryProductView";
 
 const App = () => {
-    const [selectedCategory, setSelectedCategory] = useState<IDType>(null);
     return (
         <div className="app">
-            <Categories onSelectCategory={setSelectedCategory} />
-            {selectedCategory && (
-                <ProductList
-                    categoryId={selectedCategory}
-                    productsPerPage={2}
-                />
-            )}
+            <CategoryProductView/>
         </div>
     );
 };
