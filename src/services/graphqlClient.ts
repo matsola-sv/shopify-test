@@ -9,7 +9,7 @@ if (!API_URL || !API_TOKEN) {
 }
 
 export const fetchGraphQL = async <T>(query: string, variables = {}): Promise<T> => {
-    const response = await fetch(API_URL, {
+    const response: Response = await fetch(API_URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ export const fetchGraphQL = async <T>(query: string, variables = {}): Promise<T>
     });
 
     if (!response.ok) {
-        const errorText = await response.text();
+        const errorText: string = await response.text();
         console.error(`HTTP error ${response.status}: ${errorText}`);
         throw new Error(`Failed to fetch from Shopify API: ${errorText}`);
     }
