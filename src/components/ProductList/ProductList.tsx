@@ -21,8 +21,7 @@ const ProductList: FC<ProductsProps> = ({ categoryId, productsPerPage = 10 }) =>
         [categoryId]
     );
 
-    const renderProduct = (item: ProductI): React.ReactNode => {
-        const product = item.node;
+    const renderProduct = (product: ProductI): React.ReactNode => {
         const {amount, currencyCode}: PriceI = product.priceRange.minVariantPrice;
 
         return (

@@ -1,8 +1,6 @@
 export interface CategoryI {
-    node: {
-        id: string;
-        title: string;
-    }
+    id: string;
+    title: string;
 }
 
 export interface PriceI {
@@ -11,12 +9,10 @@ export interface PriceI {
 }
 
 export interface ProductI {
-    node: {
-        id: string;
-        title: string;
-        description?: string;
-        priceRange: {
-            minVariantPrice: PriceI;
-        };
-    }
+    id: string;
+    title: string;
+    description?: string;
+    priceRange: {
+        minVariantPrice: PriceI;
+    };
 }

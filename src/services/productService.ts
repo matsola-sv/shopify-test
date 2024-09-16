@@ -1,6 +1,17 @@
-import {CollectionI, CursorType, IDType} from "../models/common";
+import {CollectionI, CursorType, IDType, PageInfoI} from "../models/common";
 import {ProductI} from "../models/shopifyEntities";
 import {fetchGraphQL} from "./graphqlClient";
+
+interface ShopifyProductsResult {
+    collection: {
+        products: {
+            edges: {
+                node: ProductI
+            }[],
+            pageInfo: PageInfoI
+        }
+    }
+}
 
 export const getProductsByCategory = async (
     id: IDType,
@@ -34,17 +45,17 @@ export const getProductsByCategory = async (
             }    
         }
     `;
-    const data = await fetchGraphQL<any>(query, {
+    const result = await fetchGraphQL<ShopifyProductsResult>(query, {
             categoryId: id,
             cursor: cursor,
             first: limit
         }
     );
 
-    if (data) {
-        const products = data.collection.products;
+    if (result) {
+        const products = result.collection.products;
         return {
-            items: products.edges,
+            items: products.edges.map(edge => edge.node),
             pageInfo: products.pageInfo,
         };
     }

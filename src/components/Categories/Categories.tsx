@@ -22,7 +22,7 @@ const Categories: FC<CategoriesProps> = ({ onSelectCategory }) => {
     const handlerClick = (category: CategoryI) => {
         if (category !== activeCategory) {
             setActiveCategory(category);
-            onSelectCategory(category.node.id);
+            onSelectCategory(category.id);
         }
     };
 
@@ -33,11 +33,11 @@ const Categories: FC<CategoriesProps> = ({ onSelectCategory }) => {
     return (
         <div className="categories">
             {categories.map((category) => (
-                <Button key={category.node.id}
+                <Button key={category.id}
                         className={getClassByCategory(category)}
                         onClick={handlerClick.bind(this, category)}
                 >
-                    {category.node.title}
+                    {category.title}
                 </Button>
             ))}
         </div>
