@@ -1,0 +1,29 @@
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Dark text */
+    font-size: 1.2rem; /* Base font size */
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styles for screens up to 1024px are optional, as the base styles are already responsive */
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+    .preloader {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Styles for very small screens */
+@media (max-width: 480px) {
+    .preloader {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import './Preloader.css';
 
 interface PreloaderProps {
     message?: string;

@@ -42,15 +42,20 @@
     .pagination {
         flex-direction: row; /* Horizontal alignment of pagination Buttons */
         flex-wrap: wrap; /* Wrapping Buttons on mobile devices */
+        gap: 10px; /* Added space between Buttons */
     }
     .pagination button {
         font-size: 12px;
         padding: 6px 12px;
+        margin: 0; /* Removed margins to use gap instead */
     }
 }
 
 /* Adaptations for very small screens */
 @media (max-width: 480px) {
+    .pagination {
+        gap: 8px; /* Smaller gap for very small screens */
+    }
     .pagination button {
         font-size: 10px;
         padding: 4px 8px;
