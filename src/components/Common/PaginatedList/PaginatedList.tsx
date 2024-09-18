@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import './PaginatedList.css';
-import {CollectionI} from "../../../models/common";
+import {CollectionI, Identifiable} from "../../../models/common";
 import {CursorType, PageInfoI} from "../../../models/common";
 import Pagination from "../Pagination/Pagination";
 import Preloader from "../Preloader/Preloader";
@@ -10,7 +10,7 @@ interface PaginatedListProps<E> {
     renderItem: (item: E) => React.ReactNode;
 }
 
-const PaginatedList = <E,>({ fetchData, renderItem }: PaginatedListProps<E>) => {
+const PaginatedList = <E extends Identifiable>({ fetchData, renderItem }: PaginatedListProps<E>) => {
     const [items, setItems] = useState<E[]>([]);
     const [pageInfo, setPageInfo] = useState<PageInfoI>();
     const [loading, setLoading] = useState<boolean>(false);
@@ -50,8 +50,8 @@ const PaginatedList = <E,>({ fetchData, renderItem }: PaginatedListProps<E>) => 
     }, [fetchData]);
 
     const renderItems = (): React.ReactNode => {
-        return items.map((item, index) => (
-            <div key={index} className="list-item">
+        return items.map(item => (
+            <div key={item.id} className="list-item">
                 {renderItem(item)}
             </div>
         ));

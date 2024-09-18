@@ -1,4 +1,4 @@
-import {CollectionI, CursorType, IDType, PageInfoI} from "../models/common";
+import {CollectionI, CursorType, NullableString, PageInfoI} from "../models/common";
 import {ProductI} from "../models/shopifyEntities";
 import {fetchGraphQL} from "./graphqlClient";
 
@@ -14,7 +14,7 @@ interface ShopifyProductsResult {
 }
 
 export const getProductsByCategory = async (
-    id: IDType,
+    id: NullableString,
     cursor: CursorType,
     limit: number = 10
 ): Promise<CollectionI<ProductI> | null> => {

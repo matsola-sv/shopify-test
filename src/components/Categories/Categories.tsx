@@ -1,12 +1,12 @@
 import React, {useState, useEffect, FC} from 'react';
 import './Categories.css';
-import {IDType} from "../../models/common";
+import {NullableString} from "../../models/common";
 import {CategoryI} from "../../models/shopifyEntities";
 import {getCategories} from '../../services/categoryService';
 import Button from "../Common/Buttons/Button/Button";
 
 interface CategoriesProps {
-    onSelectCategory: (id: IDType) => void;
+    onSelectCategory: (id: NullableString) => void;
 }
 
 const Categories: FC<CategoriesProps> = ({ onSelectCategory }) => {
