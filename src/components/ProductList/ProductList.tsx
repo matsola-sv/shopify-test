@@ -1,7 +1,6 @@
 import React, {FC, useCallback} from 'react';
 import './ProductList.css';
-import {CursorType} from "../../models/common";
-import {CollectionI} from "../../models/common";
+import {CollectionI, CursorType} from "../../models/common";
 import {PriceI, ProductI} from "../../models/shopifyEntities";
 import {getProductsByCategory} from '../../services/productService';
 import PaginatedList from "../Common/PaginatedList/PaginatedList";
@@ -18,7 +17,7 @@ const ProductList: FC<ProductsProps> = ({ categoryId, productsPerPage = 10 }) =>
                categoryId, cursor, productsPerPage
            );
         },
-        [categoryId]
+        [categoryId, productsPerPage]
     );
 
     const renderProduct = (product: ProductI): React.ReactNode => {

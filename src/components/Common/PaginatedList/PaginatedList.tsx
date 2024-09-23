@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useCallback} from 'react';
 import './PaginatedList.css';
-import {CollectionI, Identifiable} from "../../../models/common";
-import {CursorType, PageInfoI} from "../../../models/common";
+import {CollectionI, CursorType, Identifiable, PageInfoI} from "../../../models/common";
 import Pagination from "../Pagination/Pagination";
 import Preloader from "../Preloader/Preloader";
 
@@ -14,8 +13,8 @@ const PaginatedList = <E extends Identifiable>({ fetchData, renderItem }: Pagina
     const [items, setItems] = useState<E[]>([]);
     const [pageInfo, setPageInfo] = useState<PageInfoI>();
     const [loading, setLoading] = useState<boolean>(false);
-    const [currentCursor, setCurrentCursor] = useState<CursorType>(null);
-    const [cursorHistory, setCursorHistory] = useState<CursorType[]>([]);
+    const [currentCursor, setCurrentCursor] = useState<CursorType>(null);  // Indicates the element from which new data will be loaded.
+    const [cursorHistory, setCursorHistory] = useState<CursorType[]>([]);  // Used to navigate between pages
 
     const loadItems = useCallback((cursor: CursorType): void => {
         setLoading(true);
@@ -47,7 +46,7 @@ const PaginatedList = <E extends Identifiable>({ fetchData, renderItem }: Pagina
 
     useEffect(() => {
         loadItems(currentCursor);
-    }, [fetchData]);
+    }, [loadItems, currentCursor]);
 
     const renderItems = (): React.ReactNode => {
         return items.map(item => (

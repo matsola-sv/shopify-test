@@ -7,7 +7,11 @@ import Preloader from "../Common/Preloader/Preloader";
 // Moved outside the function to avoid repeated React.lazy calls on every render of CategoryProductView.
 const ProductList = React.lazy(() => import('../ProductList/ProductList'));
 
-const CategoryProductView: FC = () => {
+interface CategoryProductViewProps {
+    productsPerPage?: number;
+}
+
+const CategoryProductView: FC<CategoryProductViewProps> = ({productsPerPage = 2}) => {
     const [activeCategory, setActiveCategory] = useState<NullableString>(null);
 
     return (
@@ -17,7 +21,7 @@ const CategoryProductView: FC = () => {
                 <Suspense fallback={<Preloader/>}>
                     <ProductList
                         categoryId={activeCategory}
-                        productsPerPage={2}
+                        productsPerPage={productsPerPage}
                     />
                 </Suspense>
             )}

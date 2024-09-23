@@ -6,8 +6,8 @@ export interface Identifiable {
 }
 
 export interface PageInfoI {
-    startCursor: CursorType;
-    endCursor: CursorType;
+    startCursor: CursorType;    // The position of the first page element.
+    endCursor: CursorType;      // The position of the last page element.
     hasPreviousPage: boolean;
     hasNextPage: boolean;
 }
