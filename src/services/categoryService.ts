@@ -1,5 +1,5 @@
-import {CategoryI} from "../models/shopifyEntities";
 import {fetchGraphQL} from "./graphqlClient";
+import {CategoryI} from "../models/shopifyEntities";
 
 interface ShopifyCategoriesResult {
     collections: {

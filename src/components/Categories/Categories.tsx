@@ -1,9 +1,13 @@
 import React, {useState, useEffect, FC} from 'react';
-import './Categories.css';
+
 import {NullableString} from "../../models/common";
 import {CategoryI} from "../../models/shopifyEntities";
+
 import {getCategories} from '../../services/categoryService';
+
 import Button from "../Common/Buttons/Button/Button";
+
+import './Categories.css';
 
 interface CategoriesProps {
     onSelectCategory: (id: NullableString) => void;

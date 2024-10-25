@@ -1,5 +1,7 @@
 import React, {FC, Suspense, useState} from 'react';
+
 import { NullableString } from '../../models/common';
+
 import Categories from '../Categories/Categories';
 import Preloader from "../Common/Preloader/Preloader";
 

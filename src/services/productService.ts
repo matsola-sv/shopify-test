@@ -1,6 +1,7 @@
+import {fetchGraphQL} from "./graphqlClient";
+
 import {CollectionI, CursorType, NullableString, PageInfoI} from "../models/common";
 import {ProductI} from "../models/shopifyEntities";
-import {fetchGraphQL} from "./graphqlClient";
 
 interface ShopifyProductsResult {
     collection: {

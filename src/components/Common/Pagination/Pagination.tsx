@@ -1,7 +1,10 @@
 import React, {FC} from "react";
-import './Pagination.css';
+
 import {CursorType, PageInfoI} from "../../../models/common";
+
 import Button from "../Buttons/Button/Button";
+
+import './Pagination.css';
 
 interface PaginationProps {
     pageInfo: PageInfoI,

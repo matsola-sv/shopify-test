@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import CategoryProductView from "../CategoryProductView/CategoryProductView";
+import './App.css';
 
 const App = () => {
     return (
